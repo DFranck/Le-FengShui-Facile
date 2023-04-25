@@ -13,7 +13,7 @@
 				<h1>Le FengShui Facile</h1>
 				<ul>
 					<li><a href="./fengshui.html">FengShui</a></li>
-					<li><a href="./nombrekua.html">Nombre Kua</a> </li>
+					<li><a href="./nombrekua.html">Chiffre Kua</a> </li>
 					<li><a href="./loshu.html">Carré Lo shu</a></li>
 					<li><a href="./bagua.html">Octogone Bagua</a></li>
 					<li><a href="./etoilevolante.html">Etoiles Volantes</a></li>
@@ -25,16 +25,16 @@
 			<div class="fengshuibox">
 				<h2>Le FengShui:</h2>
 				<p>Le Feng Shui est un art chinois ancien visant à équilibrer et harmoniser les énergies de notre environnement. Il cherche à créer des espaces favorisant la santé, la prospérité et le bien-être en utilisant des principes tels que le Chi, le Yin et le Yang, et les cinq éléments. Les méthodes du Feng Shui comprennent l'agencement des meubles, le choix des couleurs, l'utilisation de formes et de symboles, et l'organisation de l'espace. En appliquant ces principes, vous pouvez créer un environnement harmonieux et équilibré qui soutient votre bien-être et vos relations.</p>
-				<a href="./fengshui.html">Pour en savoir plus su le fengshui clickez ici</a>
+				<a href="./fengshui.html">Plus d'info le Feng Shui ici!</a>
 			</div>
 		</div>
 		<div class="kua box">
 			<div class="kuabox">
-				<h2>Calculez votre nombre Kua : </h2>
+				<h2>Calculez votre chiffre Kua : </h2>
 			<p>Appelé Kua ou Gua, ce chiffre fondamental dans l'art du feng shui sert à déterminer "ce que vous êtes" en termes de médecine chinoise. Une fois défini, vous pourrez alors aménager votre intérieur de manière à laisser circuler les énergies et à favoriser le bien-être dans votre maison.Appelé Kua ou Gua, ce chiffre fondamental dans l'art du feng shui sert à déterminer "ce que vous êtes" en termes de médecine chinoise. Une fois défini, vous pourrez alors aménager votre intérieur de manière à laisser circuler les énergies et à favoriser le bien-être dans votre maison.</p>
 			<a href="./nombrekua.html">Plus d'info le nombre Kua ici!</a>
 			<h3>Calculez</h3>
-			<p>renseigner ces information afin d'obtenir votre nombre Kua</p>
+			<p>renseigner ces information afin d'obtenir votre chiffre Kua</p>
 			<div class="kuaCalcul">
 			<form id="kuaForm">
 				<label for="birthDate">Date de naissance :</label>
@@ -57,9 +57,25 @@
 		<div class="loshu box">
 			<div class="loshubox">
 				<h2>Utilisez le Lo Shu : </h2>
-			<p>En vous basant sur votre nombre Kua, utilisez le Carré Lo Shu pour identifier les directions favorables et les directions à éviter dans votre espace.</p>
-			<a href="./loshu.html">Pour en savoir plus su le fengshui clickez ici</a>
+			<p>Le Carré Lo Shu est souvent utilisé dans le Feng Shui et d'autres pratiques traditionnelles chinoises pour déterminer les directions favorables et défavorables d'un individu en fonction de son nombre Kua. Il est également considéré comme ayant des propriétés mystiques et symboliques en raison de sa nature mathématique unique et de son lien avec la mythologie et la cosmologie chinoises.</p>
+			<a href="./loshu.html">Plus d'info le carré Lo Shu ici!</a>
+		</div>
+		<h3>Calculer</h3>
+		<p>En vous basant sur votre nombre Kua, utilisez le Carré Lo Shu pour identifier les directions favorables et les directions à éviter dans votre espace.</p>
+			<div class="loShuCalcul">
+				<form id="loShuForm">
+				<label for="kuaNumber">Entrez votre nombre Kua :</label>
+				<div>
+				<input type="number" id="kuaNumber" name="kuaNumber" min="1" max="9" required>
+				<button type="submit">Calculer</button>
+				</div>
+			</form>
+			<div id="loShuResult"></div>
 			</div>
+			<button class="showDetail" id="showDetailLoShu">Détail du calcul</button>
+			<div class="detailLoShu">
+			</div>
+		</div>
 		</div>
 		<div class="bagua box">
 			<div class="baguabox">
