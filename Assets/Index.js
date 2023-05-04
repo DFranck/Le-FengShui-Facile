@@ -26,9 +26,11 @@ document.getElementById("kuaForm").addEventListener("submit", function (e) {
     "Votre nombre Kua est : " + kuaNumber;
 });
 
-
 function calculateKuaNumber(birthYear, birthMonth, gender) {
-  if (typeof birthYear !== "number" || (gender !== "male" && gender !== "female")) {
+  if (
+    typeof birthYear !== "number" ||
+    (gender !== "male" && gender !== "female")
+  ) {
     console.error("Invalid input");
     return;
   }
@@ -39,7 +41,7 @@ function calculateKuaNumber(birthYear, birthMonth, gender) {
   }
 
   const lastTwoDigits = birthYear % 100;
-  let singleDigit = (lastTwoDigits % 9) || 9; // Si le résultat est 0, utiliser 9
+  let singleDigit = lastTwoDigits % 9 || 9; // Si le résultat est 0, utiliser 9
   let kuaNumber;
 
   if (gender === "male") {
@@ -57,7 +59,7 @@ function calculateKuaNumber(birthYear, birthMonth, gender) {
   }
 
   // Réduire à un seul chiffre si nécessaire et ajuster pour les 5
-  kuaNumber = (kuaNumber % 9) || 9;
+  kuaNumber = kuaNumber % 9 || 9;
   if (kuaNumber === 5) {
     kuaNumber = gender === "male" ? 2 : 8;
   }
@@ -112,18 +114,18 @@ showDetailKua.addEventListener("click", () => {
 //       8: { favorable: [1, 3, 4, 9], unfavorable: [2, 5, 6, 7, 8] },
 //       9: { favorable: [1, 3, 4, 9], unfavorable: [2, 5, 6, 7, 8] },
 //     };
-  
+
 //     const directions = ["N", "SO", "E", "SE", "", "NO", "W", "NE", "S"];
 //     const loShuGrid = [
 //       [4, 9, 2],
 //       [3, 5, 7],
 //       [8, 1, 6],
 //     ];
-  
+
 //     // Vérifier si le kuaNumber est valide
 //     if (kuaDirections.hasOwnProperty(kuaNumber)) {
 //         let { favorable, unfavorable } = kuaDirections[kuaNumber];
-    
+
 //         if (kuaDirections.hasOwnProperty(kuaNumber)) {
 //             if (kuaNumber === 5) {
 //               if (gender === "male") {
@@ -141,7 +143,7 @@ showDetailKua.addEventListener("click", () => {
 //       for (let i = 0; i < loShuGrid.length; i++) {
 //         for (let j = 0; j < loShuGrid[i].length; j++) {
 //           const cellValue = loShuGrid[i][j];
-            
+
 //           if (cellValue === 5) {
 //             loShuGrid[i][j] = "Centre";
 //           } else {
@@ -154,13 +156,13 @@ showDetailKua.addEventListener("click", () => {
 //               loShuGrid[i][j] = `${direction} (?)`;
 //             }
 //           }
-                 
+
 //         }
 //       }
 //     } else {
 //         console.error("Nombre Kua invalide");
 //     }
-  
+
 //     let loShuTable = "<table>";
 // for (let i = 0; i < loShuGrid.length; i++) {
 //   loShuTable += "<tr>";
@@ -189,7 +191,7 @@ showDetailKua.addEventListener("click", () => {
 // const detailLoShu = document.querySelector(".detailLoShu");
 // const showDetailLoShu = document.getElementById("showDetailLoShu");
 // let detailLoShuVisible = false;
-  
+
 document.getElementById("loShuForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const kuaNumber = document.getElementById("kuaNumber").value;
@@ -239,7 +241,9 @@ function createLoShuTable(kuaNumber) {
     }
   } else {
     console.error("Nombre Kua invalide");
-    alert("Désolé mais le chiffre 5 n'existe pas, veuillez rentrer un chiffre Kua valide")
+    alert(
+      "Désolé mais le chiffre 5 n'existe pas, veuillez rentrer un chiffre Kua valide"
+    );
   }
 
   let loShuTable = "<table>";
@@ -266,7 +270,7 @@ function createLoShuTable(kuaNumber) {
 function displayLoShu(loShuTable) {
   document.getElementById("loShuResult").innerHTML = loShuTable;
 }
-// 
+//
 
 // showDetailLoShu.addEventListener("click", () => {
 //     if (detailLoShuVisible) {
@@ -398,5 +402,5 @@ function displayLoShu(loShuTable) {
 //           <p>Ces directions peuvent être utilisées pour orienter votre lit, votre bureau ou d'autres aspects de l'aménagement.</p>`;
 //     }
 //     detailLoShuVisible = !detailLoShuVisible;
-  // 
+//
 //   });
