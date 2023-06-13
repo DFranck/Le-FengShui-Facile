@@ -1,2 +1,2 @@
 # Le-FengShui-Facile
-test de calcul via JS
+Petit site d'aide au fengshui
